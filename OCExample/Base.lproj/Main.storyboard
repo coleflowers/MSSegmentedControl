@@ -741,13 +741,13 @@
                                                     </connections>
                                                 </customView>
                                                 <customView identifier="withTitle" translatesAutoresizingMaskIntoConstraints="NO" id="GNY-R8-bvG" customClass="MSSegmentedControl">
-                                                    <rect key="frame" x="12" y="138" width="456" height="42"/>
+                                                    <rect key="frame" x="12" y="132" width="456" height="48"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="42" id="zjj-u7-Po8"/>
+                                                        <constraint firstAttribute="height" constant="48" id="zjj-u7-Po8"/>
                                                     </constraints>
                                                 </customView>
                                                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="QeE-r9-RPi" customClass="MSSegmentedControl">
-                                                    <rect key="frame" x="40" y="24" width="120" height="96"/>
+                                                    <rect key="frame" x="40" y="18" width="120" height="96"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="96" id="e3h-y9-Ggw"/>
                                                         <constraint firstAttribute="width" constant="120" id="lwL-6L-Paq"/>
