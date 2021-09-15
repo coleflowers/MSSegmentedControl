@@ -45,7 +45,7 @@
     self.paths = @[].mutableCopy;
     self.selectedIndex = 0;
     self.borderWidth = 0.f;
-    self.borderColor = [NSColor selectedContentBackgroundColor];
+    self.borderColor = [NSColor textColor];
     self.backgroundColor = [NSColor clearColor];
 }
 
@@ -70,7 +70,12 @@
     NSDictionary *attributes = @{
         NSFontAttributeName : font
     };
-    CGSize size = [text boundingRectWithSize:CGSizeMake(maxWidth, CGFLOAT_MAX) options:options attributes:attributes context:nil].size;
+    
+    CGSize size = [text sizeWithAttributes:attributes];
+    if (@available(macOS 10.11, *)) {
+        size = [text boundingRectWithSize:CGSizeMake(maxWidth, CGFLOAT_MAX) options:options attributes:attributes context:nil].size;
+    }
+    
     CGFloat height = ceilf(size.height) + 1;
     size.height = height;
     return size;
